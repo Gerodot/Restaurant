@@ -20,7 +20,7 @@ class ItemTableViewController: UITableViewController {
         super.viewDidLoad()
         navigationItem.title = category.localizedCapitalized
         
-        networkManager.getMenuItems(forL: category) { menuItems, error in
+        networkManager.getMenuItems(for: category) { menuItems, error in
             guard let menuItems = menuItems else {
                 print(#line, #function, "ERROR: ", terminator: "")
                 if let error = error {
