@@ -16,6 +16,9 @@
 		2D4882A9284E22E50028BD61 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4882A8284E22E50028BD61 /* NetworkManager.swift */; };
 		2D4882AB284E26BB0028BD61 /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4882AA284E26BB0028BD61 /* MenuTableViewController.swift */; };
 		2D4882AD284E2CC70028BD61 /* CellManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4882AC284E2CC70028BD61 /* CellManager.swift */; };
+		2D4882AF284E2F220028BD61 /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4882AE284E2F220028BD61 /* MenuItem.swift */; };
+		2D4882B1284E2F570028BD61 /* MenuItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4882B0284E2F560028BD61 /* MenuItems.swift */; };
+		2D4882B4284E31B80028BD61 /* URL+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4882B3284E31B80028BD61 /* URL+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +33,9 @@
 		2D4882A8284E22E50028BD61 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		2D4882AA284E26BB0028BD61 /* MenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
 		2D4882AC284E2CC70028BD61 /* CellManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellManager.swift; sourceTree = "<group>"; };
+		2D4882AE284E2F220028BD61 /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
+		2D4882B0284E2F560028BD61 /* MenuItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItems.swift; sourceTree = "<group>"; };
+		2D4882B3284E31B80028BD61 /* URL+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +68,7 @@
 		2D48828B284DFD4B0028BD61 /* Restaurant */ = {
 			isa = PBXGroup;
 			children = (
+				2D4882B2284E31A10028BD61 /* Extensions */,
 				2D4882A0284DFD5F0028BD61 /* App */,
 				2D4882A2284DFDA80028BD61 /* Controllers */,
 				2D4882A7284E22C40028BD61 /* Manager */,
@@ -111,6 +118,8 @@
 			isa = PBXGroup;
 			children = (
 				2D4882A5284E224B0028BD61 /* Catergories.swift */,
+				2D4882AE284E2F220028BD61 /* MenuItem.swift */,
+				2D4882B0284E2F560028BD61 /* MenuItems.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -122,6 +131,14 @@
 				2D4882AC284E2CC70028BD61 /* CellManager.swift */,
 			);
 			path = Manager;
+			sourceTree = "<group>";
+		};
+		2D4882B2284E31A10028BD61 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2D4882B3284E31B80028BD61 /* URL+Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,9 +212,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D4882AF284E2F220028BD61 /* MenuItem.swift in Sources */,
+				2D4882B1284E2F570028BD61 /* MenuItems.swift in Sources */,
 				2D4882A6284E224B0028BD61 /* Catergories.swift in Sources */,
 				2D4882AD284E2CC70028BD61 /* CellManager.swift in Sources */,
 				2D4882A9284E22E50028BD61 /* NetworkManager.swift in Sources */,
+				2D4882B4284E31B80028BD61 /* URL+Extension.swift in Sources */,
 				2D4882AB284E26BB0028BD61 /* MenuTableViewController.swift in Sources */,
 				2D48828D284DFD4B0028BD61 /* AppDelegate.swift in Sources */,
 				2D48828F284DFD4B0028BD61 /* SceneDelegate.swift in Sources */,

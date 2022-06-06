@@ -8,10 +8,10 @@
 import Foundation
 
 class NetworkManager {
-    let initalURL = URL(string: "http://oracle.getoutfit.co:8090")!
+    let baseURL = URL(string: "http://oracle.getoutfit.co:8090")!
     
     func getCategories(completion: @escaping ([String]?,Error?) -> Void) {
-        let url = initalURL.appendingPathComponent("categories")
+        let url = baseURL.appendingPathComponent("categories")
         let task = URLSession.shared.dataTask(with: url) {data, _,error in
             guard let data = data else {
                 completion(nil, error)
@@ -22,6 +22,29 @@ class NetworkManager {
             do {
                 let decodedDate = try decoder.decode(Categories.self, from: data)
                 completion(decodedDate.categories, nil)
+            } catch let error {
+                completion(nil, error)
+            }
+        }
+        task.resume()
+    }
+    
+    func getMenuItems(forL category: String, completion: @escaping ([MenuItems]?, Error?) -> Void) {
+        let initialURL = baseURL.appendingPathComponent("menu")
+        guard let url = initialURL.withQueries(["category" : category]) else {
+            completion(nil, nil)
+            return
+        }
+        
+        let task = URLSession.shared.dataTask(with: url) {data, _, error in
+            guard let data = data else {
+                return
+            }
+
+            do {
+                let decoder = JSONDecoder()
+                let decodedData = try decoder.decode(MenuItems.self, from: data)
+                completion(decodedData.items, nil)
             } catch let error {
                 completion(nil, error)
             }
