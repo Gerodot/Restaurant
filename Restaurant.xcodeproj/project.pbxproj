@@ -19,6 +19,7 @@
 		2D4882AF284E2F220028BD61 /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4882AE284E2F220028BD61 /* MenuItem.swift */; };
 		2D4882B1284E2F570028BD61 /* MenuItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4882B0284E2F560028BD61 /* MenuItems.swift */; };
 		2D4882B4284E31B80028BD61 /* URL+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4882B3284E31B80028BD61 /* URL+Extension.swift */; };
+		2D4882B6284E35EB0028BD61 /* ItemTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4882B5284E35EB0028BD61 /* ItemTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		2D4882AE284E2F220028BD61 /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
 		2D4882B0284E2F560028BD61 /* MenuItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItems.swift; sourceTree = "<group>"; };
 		2D4882B3284E31B80028BD61 /* URL+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Extension.swift"; sourceTree = "<group>"; };
+		2D4882B5284E35EB0028BD61 /* ItemTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				2D4882AA284E26BB0028BD61 /* MenuTableViewController.swift */,
+				2D4882B5284E35EB0028BD61 /* ItemTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -212,6 +215,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D4882B6284E35EB0028BD61 /* ItemTableViewController.swift in Sources */,
 				2D4882AF284E2F220028BD61 /* MenuItem.swift in Sources */,
 				2D4882B1284E2F570028BD61 /* MenuItems.swift in Sources */,
 				2D4882A6284E224B0028BD61 /* Catergories.swift in Sources */,

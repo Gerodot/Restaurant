@@ -51,7 +51,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="yFm-8E-eLv" kind="show" id="hPi-Er-FX7"/>
+                                    <segue destination="yFm-8E-eLv" kind="show" identifier="ItemSegue" id="hPi-Er-FX7"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -66,15 +66,15 @@
             </objects>
             <point key="canvasLocation" x="2089.8550724637685" y="-68.303571428571431"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Category-->
         <scene sceneID="P7U-PU-7bX">
             <objects>
-                <tableViewController id="yFm-8E-eLv" sceneMemberID="viewController">
+                <tableViewController id="yFm-8E-eLv" customClass="ItemTableViewController" customModule="Restaurant" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" id="NaJ-m9-KQR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="sLX-tM-t0U" detailTextLabel="oda-hW-64h" style="IBUITableViewCellStyleSubtitle" id="LFe-GA-8JO">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ItemCell" textLabel="sLX-tM-t0U" detailTextLabel="oda-hW-64h" style="IBUITableViewCellStyleValue1" id="LFe-GA-8JO">
                                 <rect key="frame" x="20" y="32" width="374" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="LFe-GA-8JO" id="Hdh-Lt-ATR">
@@ -82,16 +82,16 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="sLX-tM-t0U">
-                                            <rect key="frame" x="20" y="6" width="25" height="14.5"/>
+                                            <rect key="frame" x="20" y="12" width="33" height="20.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="oda-hW-64h">
-                                            <rect key="frame" x="20" y="22.5" width="40.5" height="13.5"/>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="oda-hW-64h">
+                                            <rect key="frame" x="295.5" y="12" width="58.5" height="20.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -107,7 +107,7 @@
                             <outlet property="delegate" destination="yFm-8E-eLv" id="5O3-5O-jVH"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="3IM-Hq-v88"/>
+                    <navigationItem key="navigationItem" title="Category" id="3IM-Hq-v88"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jq7-wI-kHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

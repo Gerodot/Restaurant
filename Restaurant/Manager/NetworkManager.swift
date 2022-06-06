@@ -29,7 +29,7 @@ class NetworkManager {
         task.resume()
     }
     
-    func getMenuItems(forL category: String, completion: @escaping ([MenuItems]?, Error?) -> Void) {
+    func getMenuItems(forL category: String, completion: @escaping ([MenuItem]?, Error?) -> Void) {
         let initialURL = baseURL.appendingPathComponent("menu")
         guard let url = initialURL.withQueries(["category" : category]) else {
             completion(nil, nil)
@@ -38,6 +38,7 @@ class NetworkManager {
         
         let task = URLSession.shared.dataTask(with: url) {data, _, error in
             guard let data = data else {
+                completion(nil, error)
                 return
             }
 

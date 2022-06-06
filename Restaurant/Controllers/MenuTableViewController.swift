@@ -34,6 +34,16 @@ class MenuTableViewController: UITableViewController {
         }
     }
     
+    // MARK: - Navigation Methods
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard
+            segue.identifier == "ItemSegue",
+            let categoryIndex = tableView.indexPathForSelectedRow
+        else { return }
+        let desitnation = segue.destination as! ItemTableViewController
+        desitnation.category = categories[categoryIndex.row]
+    }
+    
     // MARK: - UITableViewSource
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         categories.count
