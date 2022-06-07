@@ -7,10 +7,10 @@
 
 import Foundation
 import UIKit
- 
+
 class CellManager {
     let networkManager = NetworkManager()
-    
+
     func configure(_ cell: UITableViewCell, with category: String) {
         cell.textLabel?.text = category.localizedCapitalized
     }
@@ -23,7 +23,7 @@ class CellManager {
     ) {
         cell.textLabel?.text = menuItem.name
         cell.detailTextLabel?.text = String(format: "$%.2f", menuItem.price)
-       
+
         guard cell.imageView?.image == nil else { return }
         networkManager.getImage(menuItem.imageURL) { image, error in
             if let error = error {

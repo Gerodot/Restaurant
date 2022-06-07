@@ -10,10 +10,10 @@ import UIKit
 
 class NetworkManager {
     let baseURL = URL(string: "http://oracle.getoutfit.co:8090")!
-    
-    func getCategories(completion: @escaping ([String]?,Error?) -> Void) {
+
+    func getCategories(completion: @escaping ([String]?, Error?) -> Void) {
         let url = baseURL.appendingPathComponent("categories")
-        let task = URLSession.shared.dataTask(with: url) {data, _,error in
+        let task = URLSession.shared.dataTask(with: url) { data, _, error in
             guard let data = data else {
                 completion(nil, error)
                 return
@@ -29,15 +29,15 @@ class NetworkManager {
         }
         task.resume()
     }
-    
+
     func getMenuItems(for category: String, completion: @escaping ([MenuItem]?, Error?) -> Void) {
         let initialURL = baseURL.appendingPathComponent("menu")
-        guard let url = initialURL.withQueries(["category" : category]) else {
+        guard let url = initialURL.withQueries(["category": category]) else {
             completion(nil, nil)
             return
         }
-        
-        let task = URLSession.shared.dataTask(with: url) {data, _, error in
+
+        let task = URLSession.shared.dataTask(with: url) { data, _, error in
             guard let data = data else {
                 completion(nil, error)
                 return
@@ -52,23 +52,23 @@ class NetworkManager {
             }
         }
         task.resume()
-        
+
     }
-    
-    func getImage(_ initialURL: URL, completion: @escaping (UIImage?, Error?) -> Void){
+
+    func getImage(_ initialURL: URL, completion: @escaping (UIImage?, Error?) -> Void) {
         var components = URLComponents(url: initialURL, resolvingAgainstBaseURL: true)
         components?.host = baseURL.host
         guard let url = components?.url else {
             completion(nil, nil)
             return
         }
-        
+
         let tesk = URLSession.shared.dataTask(with: url) { data, _, error in
             guard let data = data else {
                 completion(nil, error)
                 return
             }
-            
+
             let image = UIImage(data: data)
             completion(image, nil)
         }

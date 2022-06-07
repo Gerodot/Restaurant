@@ -70,9 +70,9 @@
 		2D48828B284DFD4B0028BD61 /* Restaurant */ = {
 			isa = PBXGroup;
 			children = (
-				2D4882B2284E31A10028BD61 /* Extensions */,
 				2D4882A0284DFD5F0028BD61 /* App */,
 				2D4882A2284DFDA80028BD61 /* Controllers */,
+				2D4882B2284E31A10028BD61 /* Extensions */,
 				2D4882A7284E22C40028BD61 /* Manager */,
 				2D4882A4284E22350028BD61 /* Models */,
 				2D4882A1284DFD8C0028BD61 /* Resouces */,

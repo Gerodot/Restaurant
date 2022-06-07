@@ -6,7 +6,7 @@
 //
 
 import Foundation
- 
+
 struct MenuItem: Codable {
     let id: Int
     var name: String
@@ -14,8 +14,8 @@ struct MenuItem: Codable {
     var price: Double
     var category: String
     var imageURL: URL
-    
-    enum CodingKeys: String, CodingKey{
+
+    enum CodingKeys: String, CodingKey {
         case id
         case name
         case detailText = "description"

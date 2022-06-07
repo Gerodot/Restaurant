@@ -33,22 +33,22 @@ class MenuTableViewController: UITableViewController {
             }
         }
     }
-    
+
     // MARK: - Navigation Methods
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard
-            segue.identifier == "ItemSegue",
+        segue.identifier == "ItemSegue",
             let categoryIndex = tableView.indexPathForSelectedRow
-        else { return }
+            else { return }
         let desitnation = segue.destination as! ItemTableViewController
         desitnation.category = categories[categoryIndex.row]
     }
-    
+
     // MARK: - UITableViewSource
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         categories.count
     }
-    
+
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CategoryCell", for: indexPath)
         cellManager.configure(cell, with: categories[indexPath.row])
