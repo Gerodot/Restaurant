@@ -32,8 +32,8 @@ class ItemViewController: UIViewController {
         detailsTextLabel.text = menuItem.detailText
 
         // UIImageView Style
-        let cornerRadius: CGFloat = 10.0
         imageView.clipsToBounds = true
+        imageView.layer.cornerRadius = 10.0
     }
 
     // MARK: -Actions
