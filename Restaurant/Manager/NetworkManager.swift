@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 class NetworkManager {
-    let baseURL = URL(string: "http://oracle.getoutfit.co:8090")!
+    let baseURL = URL(string: "http://mda.getoutfit.co:8090/")!
 
     func getCategories(completion: @escaping ([String]?, Error?) -> Void) {
         let url = baseURL.appendingPathComponent("categories")
