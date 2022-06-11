@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D2B3B042854D4AD00890D3A /* OrderTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2B3B032854D4AD00890D3A /* OrderTableViewController.swift */; };
+		2D2B3B062854D50A00890D3A /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2B3B052854D50A00890D3A /* Order.swift */; };
 		2D48828D284DFD4B0028BD61 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D48828C284DFD4B0028BD61 /* AppDelegate.swift */; };
 		2D48828F284DFD4B0028BD61 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D48828E284DFD4B0028BD61 /* SceneDelegate.swift */; };
 		2D488294284DFD4B0028BD61 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D488292284DFD4B0028BD61 /* Main.storyboard */; };
@@ -24,6 +26,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2D2B3B032854D4AD00890D3A /* OrderTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderTableViewController.swift; sourceTree = "<group>"; };
+		2D2B3B052854D50A00890D3A /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 		2D488289284DFD4B0028BD61 /* Restaurant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Restaurant.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D48828C284DFD4B0028BD61 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2D48828E284DFD4B0028BD61 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -107,6 +111,7 @@
 				2D4882AA284E26BB0028BD61 /* CategoryTableViewController.swift */,
 				2D4882B5284E35EB0028BD61 /* MenuTableViewController.swift */,
 				2DAC6354284FE25A00C03698 /* ItemViewController.swift */,
+				2D2B3B032854D4AD00890D3A /* OrderTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -126,6 +131,7 @@
 				2D4882A5284E224B0028BD61 /* Catergories.swift */,
 				2D4882AE284E2F220028BD61 /* MenuItem.swift */,
 				2D4882B0284E2F560028BD61 /* MenuItems.swift */,
+				2D2B3B052854D50A00890D3A /* Order.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -222,11 +228,13 @@
 				2D4882B6284E35EB0028BD61 /* MenuTableViewController.swift in Sources */,
 				2D4882AF284E2F220028BD61 /* MenuItem.swift in Sources */,
 				2D4882B1284E2F570028BD61 /* MenuItems.swift in Sources */,
+				2D2B3B042854D4AD00890D3A /* OrderTableViewController.swift in Sources */,
 				2D4882A6284E224B0028BD61 /* Catergories.swift in Sources */,
 				2D4882AD284E2CC70028BD61 /* CellManager.swift in Sources */,
 				2D4882A9284E22E50028BD61 /* NetworkManager.swift in Sources */,
 				2D4882B4284E31B80028BD61 /* URL+Extension.swift in Sources */,
 				2D4882AB284E26BB0028BD61 /* CategoryTableViewController.swift in Sources */,
+				2D2B3B062854D50A00890D3A /* Order.swift in Sources */,
 				2D48828D284DFD4B0028BD61 /* AppDelegate.swift in Sources */,
 				2D48828F284DFD4B0028BD61 /* SceneDelegate.swift in Sources */,
 			);

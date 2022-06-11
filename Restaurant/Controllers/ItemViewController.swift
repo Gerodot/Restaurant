@@ -21,6 +21,7 @@ class ItemViewController: UIViewController {
     // MARK: - UIViewController Methods
     override func viewDidLoad() {
         super.viewDidLoad()
+        addToOrderButton.layer.cornerRadius = 5
         updateUI()
     }
     
@@ -38,6 +39,10 @@ class ItemViewController: UIViewController {
 
     // MARK: -Actions
     @IBAction func addToOrderButton(_ sender: UIButton) {
+        UIView.animate(withDuration: 0.3) {
+            self.addToOrderButton.transform = CGAffineTransform(scaleX: 3, y: 3)
+            self.addToOrderButton.transform = CGAffineTransform.identity
+        }
     }
 
 }
