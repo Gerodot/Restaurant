@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2D2B3B042854D4AD00890D3A /* OrderTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2B3B032854D4AD00890D3A /* OrderTableViewController.swift */; };
 		2D2B3B062854D50A00890D3A /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2B3B052854D50A00890D3A /* Order.swift */; };
+		2D2B3B082854D95300890D3A /* OrderManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2B3B072854D95300890D3A /* OrderManager.swift */; };
 		2D48828D284DFD4B0028BD61 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D48828C284DFD4B0028BD61 /* AppDelegate.swift */; };
 		2D48828F284DFD4B0028BD61 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D48828E284DFD4B0028BD61 /* SceneDelegate.swift */; };
 		2D488294284DFD4B0028BD61 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D488292284DFD4B0028BD61 /* Main.storyboard */; };
@@ -28,6 +29,7 @@
 /* Begin PBXFileReference section */
 		2D2B3B032854D4AD00890D3A /* OrderTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderTableViewController.swift; sourceTree = "<group>"; };
 		2D2B3B052854D50A00890D3A /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
+		2D2B3B072854D95300890D3A /* OrderManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderManager.swift; sourceTree = "<group>"; };
 		2D488289284DFD4B0028BD61 /* Restaurant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Restaurant.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D48828C284DFD4B0028BD61 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2D48828E284DFD4B0028BD61 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 			children = (
 				2D4882A8284E22E50028BD61 /* NetworkManager.swift */,
 				2D4882AC284E2CC70028BD61 /* CellManager.swift */,
+				2D2B3B072854D95300890D3A /* OrderManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -228,6 +231,7 @@
 				2D4882B6284E35EB0028BD61 /* MenuTableViewController.swift in Sources */,
 				2D4882AF284E2F220028BD61 /* MenuItem.swift in Sources */,
 				2D4882B1284E2F570028BD61 /* MenuItems.swift in Sources */,
+				2D2B3B082854D95300890D3A /* OrderManager.swift in Sources */,
 				2D2B3B042854D4AD00890D3A /* OrderTableViewController.swift in Sources */,
 				2D4882A6284E224B0028BD61 /* Catergories.swift in Sources */,
 				2D4882AD284E2CC70028BD61 /* CellManager.swift in Sources */,
