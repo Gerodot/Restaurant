@@ -29,7 +29,9 @@ class ItemViewController: UIViewController {
     func updateUI () {
         navigationItem.title = menuItem.name
         imageView.image = menuItem.image
-        priceLabel.text = menuItem.formattedPrice
+        priceLabel.text = menuItem.price.formattedHoundeds
+
+
         detailsTextLabel.text = menuItem.detailText
 
         // UIImageView Style

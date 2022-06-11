@@ -22,7 +22,7 @@ class CellManager {
         indexPath: IndexPath
     ) {
         cell.textLabel?.text = menuItem.name
-        cell.detailTextLabel?.text = menuItem.formattedPrice
+        cell.detailTextLabel?.text = menuItem.price.formattedHoundeds
 
         guard cell.imageView?.image == nil else { return }
 

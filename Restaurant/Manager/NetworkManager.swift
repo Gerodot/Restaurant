@@ -11,6 +11,8 @@ import UIKit
 class NetworkManager {
     let baseURL = URL(string: "http://mda.getoutfit.co:8090/")!
 
+    
+    // MARK: - GET Methtods
     func getCategories(completion: @escaping ([String]?, Error?) -> Void) {
         let url = baseURL.appendingPathComponent("categories")
         let task = URLSession.shared.dataTask(with: url) { data, _, error in
@@ -73,5 +75,10 @@ class NetworkManager {
             completion(image, nil)
         }
         tesk.resume()
+    }
+    
+    // MARK: - POST Methtods
+    func submitOrder(forMenuIDs menuIDs: [Int], completion: @escaping (Int?, Error?) -> Void) {
+        
     }
 }

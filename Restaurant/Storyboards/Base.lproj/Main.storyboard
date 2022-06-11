@@ -237,9 +237,6 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="jyX-39-OTD" kind="show" id="AaC-eb-fee"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -247,25 +244,64 @@
                             <outlet property="delegate" destination="ais-pA-nBO" id="U8j-GM-gRc"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Order" id="8xu-My-QR7"/>
+                    <navigationItem key="navigationItem" title="Order" id="8xu-My-QR7">
+                        <barButtonItem key="leftBarButtonItem" systemItem="edit" id="IDz-Lu-MMW"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="afY-kT-kIf">
+                            <connections>
+                                <action selector="submitTapped:" destination="ais-pA-nBO" id="bcH-uW-OB8"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="jyX-39-OTD" kind="show" identifier="OrderConfirmationSegue" id="yiY-tB-1tH"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3TC-Gg-m04" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2090" y="638"/>
         </scene>
-        <!--View Controller-->
+        <!--Order Confirmation View Controller-->
         <scene sceneID="dUw-iL-Maa">
             <objects>
-                <viewController id="jyX-39-OTD" sceneMemberID="viewController">
+                <viewController id="jyX-39-OTD" customClass="OrderConfirmationViewController" customModule="Restaurant" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ldx-ed-lYF">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="EZ9-GE-9Rc">
+                                <rect key="frame" x="174" y="425.66666666666669" width="80" height="75"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xda-LD-vvz">
+                                        <rect key="frame" x="0.0" y="0.0" width="80" height="40.666666666666664"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tse-cn-kuh">
+                                        <rect key="frame" x="0.0" y="40.666666666666629" width="80" height="34.333333333333343"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <connections>
+                                            <segue destination="l9m-1P-hXl" kind="unwind" unwindAction="unwind:" id="uhY-jx-Dni"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="w46-BR-h59"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="EZ9-GE-9Rc" firstAttribute="centerY" secondItem="Ldx-ed-lYF" secondAttribute="centerY" id="Hr1-G1-iS9"/>
+                            <constraint firstItem="EZ9-GE-9Rc" firstAttribute="centerX" secondItem="Ldx-ed-lYF" secondAttribute="centerX" id="TcL-nL-jUk"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="l2G-aS-IJV"/>
+                    <connections>
+                        <outlet property="timeRemaningLabel" destination="Xda-LD-vvz" id="GIu-lj-9dc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EBq-X3-Xf0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="l9m-1P-hXl" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2980" y="638"/>
         </scene>
