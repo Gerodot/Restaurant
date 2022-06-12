@@ -12,7 +12,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
     var orderTabBarItem: UITabBarItem!
     
-    
     @objc func updateOrderBadge() {
         let count = OrderManager.shared.order.menuItems.count
         orderTabBarItem.badgeValue = 0 < count ? "\(count)" : nil
@@ -24,6 +23,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let _ = (scene as? UIWindowScene) else { return }
         
+        let tempraryDictonary = NSTemporaryDirectory()
+        let urlCashe = URLCache(memoryCapacity: 25_000_000, diskCapacity: 50_000_000, diskPath: tempraryDictonary)
+        URLCache.shared = urlCashe
+
         let tabBarController = window!.rootViewController as! UITabBarController
         orderTabBarItem = tabBarController.viewControllers![1].tabBarItem
         

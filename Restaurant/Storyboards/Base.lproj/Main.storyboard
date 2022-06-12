@@ -269,18 +269,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="EZ9-GE-9Rc">
-                                <rect key="frame" x="174" y="425.66666666666669" width="80" height="75"/>
+                                <rect key="frame" x="20" y="425.66666666666669" width="388" height="75"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xda-LD-vvz">
-                                        <rect key="frame" x="0.0" y="0.0" width="80" height="40.666666666666664"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xda-LD-vvz">
+                                        <rect key="frame" x="0.0" y="0.0" width="388" height="40.666666666666664"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tse-cn-kuh">
-                                        <rect key="frame" x="0.0" y="40.666666666666629" width="80" height="34.333333333333343"/>
+                                        <rect key="frame" x="0.0" y="40.666666666666629" width="388" height="34.333333333333343"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Dismiss"/>
                                         <connections>
                                             <segue destination="l9m-1P-hXl" kind="unwind" unwindAction="unwind:" id="uhY-jx-Dni"/>
                                         </connections>
@@ -293,6 +293,8 @@
                         <constraints>
                             <constraint firstItem="EZ9-GE-9Rc" firstAttribute="centerY" secondItem="Ldx-ed-lYF" secondAttribute="centerY" id="Hr1-G1-iS9"/>
                             <constraint firstItem="EZ9-GE-9Rc" firstAttribute="centerX" secondItem="Ldx-ed-lYF" secondAttribute="centerX" id="TcL-nL-jUk"/>
+                            <constraint firstItem="EZ9-GE-9Rc" firstAttribute="leading" secondItem="w46-BR-h59" secondAttribute="leading" constant="20" id="qtE-uR-hxs"/>
+                            <constraint firstItem="w46-BR-h59" firstAttribute="trailing" secondItem="EZ9-GE-9Rc" secondAttribute="trailing" constant="20" id="ssU-uh-GYz"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="l2G-aS-IJV"/>
