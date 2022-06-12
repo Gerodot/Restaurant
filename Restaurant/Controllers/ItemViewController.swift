@@ -24,7 +24,7 @@ class ItemViewController: UIViewController {
         addToOrderButton.layer.cornerRadius = 5
         updateUI()
     }
-    
+
     // MARK: - UI Methods
     func updateUI () {
         navigationItem.title = menuItem.name

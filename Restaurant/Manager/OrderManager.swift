@@ -9,15 +9,15 @@ import Foundation
 
 class OrderManager {
     static let orderUpdateNotification = Notification.Name("OrderManager.orderUpdeted")
-    
+
     static var shared = OrderManager()
-    
-    private init() {}
-    
+
+    private init() { }
+
     var order = Order() {
         didSet {
             NotificationCenter.default.post(name: OrderManager.orderUpdateNotification, object: nil)
         }
     }
-    
+
 }

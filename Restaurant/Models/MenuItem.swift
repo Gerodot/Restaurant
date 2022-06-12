@@ -34,7 +34,7 @@ class MenuItem: Codable {
         self.imageURL = imageURL
         self.image = image
     }
-    
+
     enum CodingKeys: String, CodingKey {
         case id
         case name

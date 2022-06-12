@@ -37,10 +37,11 @@ class CategoryTableViewController: UITableViewController {
     // MARK: - Navigation Methods
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard
-        segue.identifier == "MenuSegue",
-            let categoryIndex = tableView.indexPathForSelectedRow
-            else { return }
-        let desitnation = segue.destination as! MenuTableViewController
+            segue.identifier == "MenuSegue",
+            let categoryIndex = tableView.indexPathForSelectedRow,
+            let desitnation = segue.destination as? MenuTableViewController
+        else { return }
+
         desitnation.category = categories[categoryIndex.row]
     }
 
@@ -53,5 +54,5 @@ class CategoryTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CategoryCell", for: indexPath)
         cellManager.configure(cell, with: categories[indexPath.row])
         return cell
-    } 
+    }
 }

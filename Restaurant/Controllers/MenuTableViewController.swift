@@ -41,11 +41,11 @@ class MenuTableViewController: UITableViewController {
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard
-            segue.identifier == "ItemSegue",
+        segue.identifier == "ItemSegue",
             let destination = segue.destination as? ItemViewController,
             let indexPath = tableView.indexPathForSelectedRow
-        else { return }
-        
+            else { return }
+
         destination.menuItem = menuItems[indexPath.row]
     }
 

@@ -9,11 +9,11 @@ import UIKit
 
 class OrderConfirmationViewController: UIViewController {
 
-    
+
     @IBOutlet var timeRemaningLabel: UILabel!
-    
+
     var minutes: Int!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         timeRemaningLabel.text = "Thank you for your order!\n Your waiting timae is approximately \(minutes!) minutes"
