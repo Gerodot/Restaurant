@@ -45,8 +45,8 @@ class NetworkManager {
                 return
             }
 
+            let decoder = JSONDecoder()
             do {
-                let decoder = JSONDecoder()
                 let decodedData = try decoder.decode(MenuItems.self, from: data)
                 completion(decodedData.items, nil)
             } catch let error {
@@ -54,7 +54,6 @@ class NetworkManager {
             }
         }
         task.resume()
-
     }
 
     func getImage(_ initialURL: URL, completion: @escaping (UIImage?, Error?) -> Void) {

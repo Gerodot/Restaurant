@@ -19,6 +19,8 @@ class OrderTableViewController: UITableViewController {
     // MARK: - UIViewController Methods
     override func viewDidLoad() {
         super.viewDidLoad()
+        checkEditButton()
+        navigationItem.setLeftBarButton(editButtonItem, animated: false)
         NotificationCenter.default.addObserver(
             tableView!,
             selector: #selector(UITableView.reloadData),
@@ -42,6 +44,7 @@ class OrderTableViewController: UITableViewController {
     
     // MARK: - UITableVIewSource
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        checkEditButton()
         return OrderManager.shared.order.menuItems.count
     }
     
@@ -71,6 +74,11 @@ class OrderTableViewController: UITableViewController {
         }
     }
     
+    func checkEditButton() {
+        navigationItem.rightBarButtonItem?.isEnabled = OrderManager.shared.order.menuItems.count != 0 ? true : false
+        navigationItem.leftBarButtonItem?.isEnabled = OrderManager.shared.order.menuItems.count != 0 ? true : false
+    }
+    
     // MARK: - Actions
     @IBAction func submitTapped(_ sender: UIBarButtonItem) {
         let orderTotal = OrderManager.shared.order.menuItems.reduce(0) { $0 + $1.price }
@@ -84,3 +92,25 @@ class OrderTableViewController: UITableViewController {
     }
     
 }
+
+extension OrderTableViewController /*: UITableViewDelegate */  {
+    override func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+        return .delete
+    }
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        switch editingStyle {
+            case .delete:
+                OrderManager.shared.order.menuItems.remove(at: indexPath.row)
+            case .none:
+                break
+            case .insert:
+                break
+            @unknown default:
+                break
+        }
+        checkEditButton()
+    }
+    
+}
+
